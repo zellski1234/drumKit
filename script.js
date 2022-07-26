@@ -17,17 +17,15 @@ let boom = new Audio("sounds/boom.wav");
 document.addEventListener(`keydown`, (event) => {
     if(event.keyCode == 65){
         a.style.color = `green`;
-        boom.play();
+        a.style.transform = `scale(0.8, 0.8)`
+        a.style.transition = `transform 0.5s`
         setTimeout(() => {
             a.style.color = `#3d2820`;
-            a.style.transition = `transform 0.5s`         
-        }, 600);
-          a.style.transform = `scale(0.8, 0.8)`
-          a.style.transition = `transform 0.5s`
-          setTimeout(() => {
+            a.style.transition = `transform 0.5s` 
             a.style.transform = `` 
-            a.style.transition = `transform 0.5s`         
-        }, 500);
+            a.style.transition = `transform 0.5s`          
+        }, 600);
+        boom.play();
     }
     else{
         
@@ -37,11 +35,11 @@ document.addEventListener(`keydown`, (event) => {
    
 });
 
-buttons.addEventListener(`mouseover`, () => {
-    a.style.transform = `scale(0.8, 0.8)`
-    a.style.transition = `transform 1s`
-    setTimeout(() => {
-        a.style.transform = `scale(1, 1)`
-        a.style.transition = `transform 1s`
-    }, 1000);
-})
+// buttons.addEventListener(`mouseover`, () => {
+//     a.style.transform = `scale(0.8, 0.8)`
+//     a.style.transition = `transform 1s`
+//     setTimeout(() => {
+//         a.style.transform = `scale(1, 1)`
+//         a.style.transition = `transform 1s`
+//     }, 1000);
+// })
