@@ -1,0 +1,74 @@
+
+
+*{
+    /* outline: 1px solid black; */
+}
+
+body{
+    margin: 0px;
+    background-image: url(images/wolfBand.png);
+    background-size: cover;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#contain{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 100px 50px 50px 50px;
+    background-color: #ddd;
+    opacity: 0.92;
+    padding: 20px;
+    width: 480px;
+    border-radius: 50px; 
+    height: fit-content;
+}
+
+    .buttons{
+        /* transform: scale(1.1, 1.1); */
+        margin: 10px;
+        transition: transform 0.5s;
+        transition-timing-function: ease-out;
+        background-color: #ddd;
+        color: #3d2820;
+        width: 140px;
+        height: 140px;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .buttons:hover{
+        transform: scale(0.9, 0.9);
+    }
+      .titleHead{
+        width: 100%;
+        text-align: center;
+        margin: 20px 0px 0px 0px;
+        /* background-color: aqua; */
+      }
+            h1{
+                font-size: 60px;
+                margin: 0px;
+            }
+
+      .para{
+        width: 100%;
+        text-align: center;
+        margin: -30px;
+        /* background-color: green; */
+      }
+
+            p{
+                font-size: 18px;
+                margin: 0px;
+                text-transform: uppercase;
+            }
+           
+          
