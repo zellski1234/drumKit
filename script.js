@@ -19,21 +19,19 @@ document.addEventListener(`keydown`, (event) => {
         a.style.color = `green`;
         a.style.transform = `scale(0.8, 0.8)`
         a.style.transition = `transform 0.5s`
-        setTimeout(() => {
-            a.style.color = `#3d2820`;
-            a.style.transition = `transform 0.5s` 
-            a.style.transform = `` 
-            a.style.transition = `transform 0.5s`          
-        }, 600);
+        boom.pause()
+        boom.currentTime = 0
         boom.play();
-    }
-    else{
-        
-        console.log(event.keyCode)
-       
-    }
-   
-});
+        setTimeout(() => {
+            a.style.color = `#3d2820`; 
+            a.style.transform = `` 
+        }         
+        , 500);}
+        else{
+                console.log(event.keyCode)
+        }
+    })
+    
 
 // buttons.addEventListener(`mouseover`, () => {
 //     a.style.transform = `scale(0.8, 0.8)`
