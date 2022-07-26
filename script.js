@@ -1,31 +1,33 @@
 
 
-const boom = document.getElementById(`boom`);
-const clap = document.getElementById(`clap`);
-const hithat = document.getElementById(`hithat`);
-const kick = document.getElementById(`kick`);
-const openhat = document.getElementById(`openhat`);
-const ride = document.getElementById(`ride`);
-const snare = document.getElementById(`snare`);
-const tink = document.getElementById(`tink`);
-const tom = document.getElementById(`tom`);
+const a = document.getElementById(`boom`);
+const s = document.getElementById(`clap`);
+const d = document.getElementById(`hithat`);
+const f = document.getElementById(`kick`);
+const g = document.getElementById(`openhat`);
+const h = document.getElementById(`ride`);
+const j = document.getElementById(`snare`);
+const k = document.getElementById(`tink`);
+const l = document.getElementById(`tom`);
 const buttons = document.getElementsByClassName(`buttons`);
 
+let boom = new Audio("sounds/boom.wav");
 
 
 document.addEventListener(`keydown`, (event) => {
     if(event.keyCode == 65){
-        boom.style.color = `green`;
+        a.style.color = `green`;
+        boom.play();
         setTimeout(() => {
-            boom.style.color = `#3d2820`;
-            boom.style.transition = `transform 1s`         
-        }, 1200);
-          boom.style.transform = `scale(0.8, 0.8)`
-          boom.style.transition = `transform 1s`
+            a.style.color = `#3d2820`;
+            a.style.transition = `transform 0.5s`         
+        }, 600);
+          a.style.transform = `scale(0.8, 0.8)`
+          a.style.transition = `transform 0.5s`
           setTimeout(() => {
-            boom.style.transform = `scale(1, 1)` 
-            boom.style.transition = `transform 1s`         
-        }, 1000);
+            a.style.transform = `` 
+            a.style.transition = `transform 0.5s`         
+        }, 500);
     }
     else{
         
@@ -36,10 +38,10 @@ document.addEventListener(`keydown`, (event) => {
 });
 
 buttons.addEventListener(`mouseover`, () => {
-    boom.style.transform = `scale(0.8, 0.8)`
-    boom.style.transition = `transform 1s`
+    a.style.transform = `scale(0.8, 0.8)`
+    a.style.transition = `transform 1s`
     setTimeout(() => {
-        boom.style.transform = `scale(1, 1)`
-        boom.style.transition = `transform 1s`
+        a.style.transform = `scale(1, 1)`
+        a.style.transition = `transform 1s`
     }, 1000);
 })
